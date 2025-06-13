@@ -171,20 +171,7 @@ fun InteractiveButton(
     val isLastPage = pagerState.currentPage == pagerState.pageCount - 1
     val pageOffset = pagerState.currentPageOffsetFraction.absoluteValue
 
-    // Determine the transition progress based on which page we are leaving/entering
-    val transitionProgress by remember {
-        derivedStateOf {
-            if (isLastPage) { // Transitioning to the last page
-                pageOffset
-            } else if (pagerState.currentPage == pagerState.pageCount - 2) { // Leaving the second to last page
-                pageOffset
-            } else {
-                0f
-            }
-        }
-    }
-
-
+// Removed unused transitionProgress variable
     val buttonWidth by animateDpAsState(
         targetValue = if (isLastPage) 200.dp else 60.dp,
         animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy)
