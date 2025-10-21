@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.everday.ui.app.OnboardingView
 import com.example.everday.ui.theme.EverdayTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,8 +22,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     // Here you would typically have navigation logic.
-                    // For now, we directly show the OnboardingScreen.
-                    OnboardingView()
+
                 }
             }
         }
